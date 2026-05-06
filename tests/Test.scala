@@ -9,5 +9,8 @@ object TestRunner {
     val signalcase_3 = Signal(89, 95, 22, 11, 8)
     assert(Policy.score(signalcase_3) == 162)
     assert(Policy.classify(signalcase_3) == "accept")
+    val domainReview = DomainReview(65, 24, 27, 46)
+    assert(DomainReviewLens.score(domainReview) == 119)
+    assert(DomainReviewLens.lane(domainReview) == "watch")
   }
 }
